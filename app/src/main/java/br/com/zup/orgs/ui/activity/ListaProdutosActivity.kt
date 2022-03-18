@@ -17,12 +17,12 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configuraRecyclerView()
+        configuraFab()
     }
 
     override fun onResume() {
         super.onResume()
         adapter.atualiza(dao.buscaTodos())
-        configuraFab()
     }
 
     private fun configuraFab() {
