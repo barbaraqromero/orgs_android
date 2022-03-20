@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.orgs.R
 import br.com.zup.orgs.dao.ProdutoDAO
 import br.com.zup.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos) {
@@ -26,8 +27,8 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
     }
 
     private fun configuraFab() {
-        val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        fab.setOnClickListener {
+        val extendedFloatingActionButton = findViewById<ExtendedFloatingActionButton>(R.id.extendedfab)
+        extendedFloatingActionButton.setOnClickListener {
             irPraForm()
         }
     }
