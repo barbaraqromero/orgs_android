@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cestas_de_frutas" />
+            app:srcCompat="@drawable/add_image" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fomulario_produto_textinputlayout_nome"

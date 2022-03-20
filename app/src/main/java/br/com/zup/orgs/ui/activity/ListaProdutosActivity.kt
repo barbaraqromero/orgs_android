@@ -20,17 +20,6 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
         super.onCreate(savedInstanceState)
         configuraRecyclerView()
         configuraFab()
-        AlertDialog.Builder(this)
-            .setTitle("Teste")
-            .setMessage("Mensagem de teste")
-            .setPositiveButton("Confirmar") {dialog, which ->
-
-            }
-            .setNegativeButton("Cancelar") {_, _ ->
-
-            }
-
-            .show()
     }
 
     override fun onResume() {
