@@ -20,7 +20,6 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_bold"
             android:maxLines="1"
-            android:text="Cesta de frutas"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView"
@@ -47,7 +46,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/montserrat"
-            android:text="19,99"
             android:textColor="@color/teal_700"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -55,12 +53,12 @@
             app:layout_constraintStart_toStartOf="@id/produto_item_nome"
             app:layout_constraintTop_toBottomOf="@id/produto_item_descricao" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.3"/>
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--            android:id="@+id/guideline"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            app:layout_constraintGuide_percent="0.3"/>-->
 
         <ImageView
             android:id="@+id/imageView"
@@ -68,9 +66,10 @@
             android:layout_height="0dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@id/produto_item_nome"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3"
             app:srcCompat="@drawable/cestas_de_frutas" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
