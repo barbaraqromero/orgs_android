@@ -42,7 +42,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/produto_item_nome"
-        app:srcCompat="@android:color/holo_green_light"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:srcCompat="@drawable/cestas_de_frutas"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
