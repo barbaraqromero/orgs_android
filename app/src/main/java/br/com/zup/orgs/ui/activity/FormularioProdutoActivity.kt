@@ -10,6 +10,7 @@ import br.com.zup.orgs.R
 import br.com.zup.orgs.dao.ProdutoDAO
 import br.com.zup.orgs.databinding.ActivityFormularioProdutoBinding
 import br.com.zup.orgs.databinding.FormularioImagemBinding
+import br.com.zup.orgs.extensions.tentarCarregarImagem
 import br.com.zup.orgs.model.Produto
 import coil.load
 import java.math.BigDecimal
@@ -24,12 +25,13 @@ class FormularioProdutoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        title = "Cadastrar produto"
         configuraBotaoSalvar()
         binding.activityFormularioProdutoImagem.setOnClickListener {
             val bindingFormImagem = FormularioImagemBinding.inflate(layoutInflater)
             bindingFormImagem.formularioImagemBotaoCarregar.setOnClickListener {
                 val url = bindingFormImagem.formularioImagemUrl.text.toString()
-                bindingFormImagem.formularioImagemImageview.load(url)
+                bindingFormImagem.formularioImagemImageview.tentarCarregarImagem(url)
             }
 
             AlertDialog.Builder(this)

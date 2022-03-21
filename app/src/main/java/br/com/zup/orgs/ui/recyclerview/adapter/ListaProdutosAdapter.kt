@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.orgs.R
 import br.com.zup.orgs.databinding.ProductItemBinding
+import br.com.zup.orgs.extensions.tentarCarregarImagem
 import br.com.zup.orgs.model.Produto
 import coil.load
 import java.text.NumberFormat
@@ -42,14 +43,9 @@ class ListaProdutosAdapter(
 
             binding.imageView.visibility = visibilidade
 
-            binding.imageView.load(produto.imagem) {
-                fallback(R.drawable.error)
-                error(R.drawable.error)
-            }
+            binding.imageView.tentarCarregarImagem(produto.imagem)
         }
-
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(context)
@@ -71,6 +67,7 @@ class ListaProdutosAdapter(
         notifyDataSetChanged()
 
     }
+
 }
 
 
