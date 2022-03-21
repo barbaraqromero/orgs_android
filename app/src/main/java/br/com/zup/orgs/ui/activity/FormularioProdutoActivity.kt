@@ -2,18 +2,12 @@ package br.com.zup.orgs.ui.activity
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import br.com.zup.orgs.R
 import br.com.zup.orgs.dao.ProdutoDAO
 import br.com.zup.orgs.databinding.ActivityFormularioProdutoBinding
-import br.com.zup.orgs.databinding.FormularioImagemBinding
 import br.com.zup.orgs.extensions.tentarCarregarImagem
 import br.com.zup.orgs.model.Produto
 import br.com.zup.orgs.ui.dialog.FormularioImagemDialog
-import coil.load
 import java.math.BigDecimal
 
 class FormularioProdutoActivity : AppCompatActivity() {
@@ -69,6 +63,8 @@ class FormularioProdutoActivity : AppCompatActivity() {
             imagem = url
         )
     }
+
 }
+
 
 

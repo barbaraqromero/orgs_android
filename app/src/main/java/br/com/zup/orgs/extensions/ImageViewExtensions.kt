@@ -10,4 +10,5 @@ fun ImageView.tentarCarregarImagem(url: String? = null) {
         error(R.drawable.error)
         placeholder(R.drawable.placeholder)
     }
+
 }

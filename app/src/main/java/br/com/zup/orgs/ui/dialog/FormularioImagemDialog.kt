@@ -13,6 +13,7 @@ class FormularioImagemDialog(private val context: Context) {
         quandoImagemCarregada: (imagem: String) -> Unit
     ) {
         FormularioImagemBinding.inflate(LayoutInflater.from(context)).apply {
+
             urlPadrao.let {
                 formularioImagemImageview.tentarCarregarImagem(it)
                 formularioImagemUrl.setText(it)
@@ -35,4 +36,5 @@ class FormularioImagemDialog(private val context: Context) {
                 .show()
         }
     }
+
 }

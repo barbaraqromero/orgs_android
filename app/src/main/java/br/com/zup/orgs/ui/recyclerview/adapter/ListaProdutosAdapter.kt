@@ -4,14 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import br.com.zup.orgs.R
 import br.com.zup.orgs.databinding.ProductItemBinding
 import br.com.zup.orgs.extensions.tentarCarregarImagem
 import br.com.zup.orgs.model.Produto
-import coil.load
 import java.text.NumberFormat
 import java.util.*
 
@@ -69,6 +65,7 @@ class ListaProdutosAdapter(
     }
 
 }
+
 
 
 

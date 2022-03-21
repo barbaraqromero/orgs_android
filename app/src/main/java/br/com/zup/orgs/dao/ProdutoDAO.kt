@@ -4,7 +4,7 @@ import br.com.zup.orgs.model.Produto
 
 class ProdutoDAO {
 
-    companion object{
+    companion object {
         private val produtos = mutableListOf<Produto>()
     }
 
@@ -15,4 +15,5 @@ class ProdutoDAO {
     fun buscaTodos(): List<Produto> {
         return produtos.toList()
     }
+
 }
