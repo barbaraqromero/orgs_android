@@ -33,7 +33,19 @@ class ListaProdutosAdapter(
             val formatador = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
             val valorEmMoeda = formatador.format(produto.valor)
             valor.text = valorEmMoeda
-            binding.imageView.load(produto.imagem)
+
+            val visibilidade = if (produto.imagem != null) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
+
+            binding.imageView.visibility = visibilidade
+
+            binding.imageView.load(produto.imagem) {
+                fallback(R.drawable.error)
+                error(R.drawable.error)
+            }
         }
 
     }
